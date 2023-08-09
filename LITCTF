@@ -1,1 +1,14 @@
+![image](https://github.com/Aowpu/CTF/assets/130723782/08bb362e-beba-49ba-a396-e7edf8f18eaa)Thử thánh: My boss left... Guess I can be a bit more loose on checking people.
+http://litctf.org:31784/
 
+Write up:
+- Sau khi bấm vào link web trên thì nó hiện ra nút login và mình bấm vào nó và hiện ra trang login
+![image](https://github.com/Aowpu/CTF/assets/130723782/eb36da64-3c09-486a-9743-b441ad991d1d)
+
+- Tiếp theo trong đề của thử thách có file code web đó, trong đó có file php
+  ![image](https://github.com/Aowpu/CTF/assets/130723782/863fe706-af60-4a21-a693-6d805d201666)
+
+- Sau khi đọc file php thì mình nhận ra trang login chỉ check password và không có username 
+- Tiếp theo là password được mã hóa là đặt trong biến $valid_password
+- Sau đó mình nhập tài khoản bất kì và mật là 'dGhpcyBpcyBzb21lIGdpYmJlcmlzaCB0ZXh0IHBhc3N3b3Jk' và trang login và nó trả về flag
+  LITCTF{oOps_sh0uld_h4v3_us3d_str1ct_c0mp4r1sons}
