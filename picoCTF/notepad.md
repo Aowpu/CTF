@@ -14,7 +14,7 @@ Nó kiểm tra nội dung đã nhập và sau đó tạo một tệp HTML tươn
 - Tệp index.html cho thấy thấy rằng nó sẽ hiện ra lỗi nếu có nên tôi đã thử cho error là 1 thứ gì đó bất kì
 ![image](https://github.com/Aowpu/CTF/assets/130723782/ab45f4b9-aee2-460f-aa8e-1e05ef4cced5)
 ![image](https://github.com/Aowpu/CTF/assets/130723782/5fea4dff-f48f-4915-821a-a6d5551bc0d7)
-- Trong đoạn code trên có thể thấy nó đã tạo tệp name, tên của tệp là 128 kí tự đầu tiên của nội dụng và mã thông báo ngẫu nhiên
+- Trong đoạn code trên có thể thấy nó đã tạo tệp name, tên của tệp là 128 kí tự đầu tiên của nội dung và mã thông báo ngẫu nhiên
 - Có một điều rằng chúng ta có thể dựa trên url_fix(content[:128]) cho thấy khi tìm kiếm thì url_fix sẽ biến \ thành / mà ở trong
 điều kiện không hề cấm điều này. Chúng ta có thể sử dụng điều này để duyệt qua hệ thống tập tin.
 # Attack #
