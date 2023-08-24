@@ -1,6 +1,6 @@
 # Overview #
 - Points : 100
-- Tags : `Web Exploitation`
+- Tags : `Web Exploitation`.
 # Description #
 This note-taking site seems a bit off.  https://notepad.mars.picoctf.net/
 
