@@ -3,6 +3,7 @@
 - Tags : `Web Exploitation`
 # Description #
 This note-taking site seems a bit off.  https://notepad.mars.picoctf.net/
+
 src: https://artifacts.picoctf.net/picoMini+by+redpwn/Web+Exploitation/notepad/notepad.tar
 # Observe #
 ![image](https://github.com/Aowpu/CTF/assets/130723782/3a2a539d-fb32-400d-bae1-0a81b6b60bc5)
