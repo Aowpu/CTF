@@ -6,10 +6,11 @@ This note-taking site seems a bit off.  https://notepad.mars.picoctf.net/
 
 src: https://artifacts.picoctf.net/picoMini+by+redpwn/Web+Exploitation/notepad/notepad.tar
 # Observe #
+
 ![image](https://github.com/Aowpu/CTF/assets/130723782/3a2a539d-fb32-400d-bae1-0a81b6b60bc5)
+
 - Mã trên tạo một ứng dụng Flask cho phép bạn nhập nội dung và tạo ra các trang web tĩnh.
 Nó kiểm tra nội dung đã nhập và sau đó tạo một tệp HTML tương ứng để hiển thị nội dung. 
-
 ![image](https://github.com/Aowpu/CTF/assets/130723782/65f6f399-7e9d-4921-9916-f6a246f869b7)
 - Tệp index.html cho thấy thấy rằng nó sẽ hiện ra lỗi nếu có nên tôi đã thử cho error là 1 thứ gì đó bất kì
   
